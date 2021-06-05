@@ -5,10 +5,11 @@ require_once('./Model/LoginModel.php');
 // class Login herite de la class Controller
 class Login extends Controller {
   //
-  
+  // declaration de variable public accessible par des tiers
   public $active = 'login'; 
-    private $loginModel;
-
+  // declaration de variable private accessible que dans la class
+  private $loginModel;
+  // la fonction return rien
   /**
     * @param null|void
     * @return null|void

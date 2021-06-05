@@ -1,8 +1,13 @@
+<!-- inclure le ficher php -->
 <?php require_once('./controller/Dashboard.php'); ?>
 <?php
+  //creer un objet de la class Dashboard
   $Dashboard = new Dashboard();
+  //affecter la variable avec un tableau vide
   $Response = [];
+  //stock l'attribut active de la class Dashboard vu qu'il public dans la variable $active 
   $active = $Dashboard->active;
+  // on affecte 
   $News = $Dashboard->getNews();
 ?>
 <?php require('./nav.php'); ?>
