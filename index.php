@@ -7,7 +7,7 @@
   $Login = new Login();
   // init la variable avec un tableau vide
   $Response = [];
-  
+  //
   $active = $Login->active;
   if (isset($_POST) && count($_POST) > 0) $Response = $Login->login($_POST);
 ?>
@@ -23,8 +23,10 @@
                 <span aria-hidden="true" class="text-danger">&times;</span>
               </button>
             </div>
+            <!-- fin du if -->
             <?php endif; ?>
             <div class="card shadow-lg p-3 mb-5 bg-white rounded">
+            <!-- tu dirige ton $_POST vers la page elle même -->
               <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" class="form-signin">
               <h4 class="h3 mb-3 font-weight-normal text-center">Sign in</h4>
               <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12 col-lg-12 mt-4">
