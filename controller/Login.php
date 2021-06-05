@@ -1,9 +1,11 @@
 <?php
+// inclus les fichiers Controller.php LoginModel.php
 require_once(__dir__ . '/Controller.php');
 require_once('./Model/LoginModel.php');
-
+// class Login herite de la class Controller
 class Login extends Controller {
-
+  //
+  
   public $active = 'login'; 
     private $loginModel;
 

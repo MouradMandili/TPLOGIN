@@ -1,16 +1,20 @@
 <?php
+  // class connexion
   class Db {
+    // déclaration des variables de connexion
     protected $dbName = 'learning_dollars_db'; /** Database Name */
     protected $dbHost = 'localhost'; /** Database Host */
     protected $dbUser = 'root'; /** Database Root */
     protected $dbPass = ''; /** Databse Password */
     protected $dbHandler, $dbStmt;
 
+    //documentation php
     /**
       * @param null|void
       * @return null|void
       * @desc Creates or resume an existing database connection...
     **/
+    // fonction constructeur
     public function __construct()
     {
       // Create a DSN Resource...

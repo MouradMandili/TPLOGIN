@@ -1,7 +1,13 @@
-<?php require_once('./controller/Login.php'); ?>
+<?php 
+  // inclus le fichier Login.php
+  require_once('./controller/Login.php'); 
+?>
 <?php
+  // créer un objet de la class Login
   $Login = new Login();
+  // init la variable avec un tableau vide
   $Response = [];
+  
   $active = $Login->active;
   if (isset($_POST) && count($_POST) > 0) $Response = $Login->login($_POST);
 ?>
