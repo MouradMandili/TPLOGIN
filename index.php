@@ -7,17 +7,23 @@
   $Login = new Login();
   // init la variable avec un tableau vide
   $Response = [];
-  //
+  //assign la propriété active de l'objet Login dans la variable $active
   $active = $Login->active;
+  //si $_POST est definie et different de null et le tableau $_POST n'est pas vide
+  // l'objet $Login appel la fonction login en lui donnant le tableau $_POST en parametre entrant 
+  // et retourne un tableau qu'on stock dans la variable $Response
   if (isset($_POST) && count($_POST) > 0) $Response = $Login->login($_POST);
 ?>
+  <!-- inclure nav.php -->
   <?php require('./nav.php'); ?>
     <main role="main" class="container">
       <div class="container">
         <div class="row justify-content-center mt-10">
           <div class="col-xs-12 col-sm-12 col-md-12 col-xl-4 col-lg-4 center-align center-block">
+          <!-- si le tableau est defini et != null et status == false -->
             <?php if (isset($Response['status']) && !$Response['status']) : ?>
             <div class="alert alert-danger" role="alert">
+            <!-- les identifiants ne sont pas valide -->
               <span><B>Oops!</B> Invalid Credentials Used.</span>
               <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true" class="text-danger">&times;</span>

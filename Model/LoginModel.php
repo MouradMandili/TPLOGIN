@@ -34,7 +34,7 @@
         //on retourne le tableau
         return $Response;
       }
-      //si la variable n'est pas vide
+      //si la variable n'est pas vide 
       if (!empty($Email)) {
         //tu me stock le tableau associatif array dans la variable $Response
         $Response = array(
